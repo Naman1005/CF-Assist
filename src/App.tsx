@@ -21,7 +21,7 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="#/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <Code className="h-8 w-8 text-blue-500" />
               <span className="ml-2 text-xl font-bold">CF-Assist</span>
             </Link>
@@ -62,14 +62,14 @@ function PageHeader() {
     <div className="flex items-center justify-between mb-8">
       <div className="flex items-center gap-6">
         <Link
-          to={`/dashboard/${handle}`}  // ✅ Absolute path
+          to={`/dashboard/${handle}`} 
           className={`text-2xl font-bold ${isDashboard ? 'text-blue-600' : 'text-gray-600'}`}
         >
           Dashboard
         </Link>
         <div className="h-8 w-px bg-gray-300"></div>
         <Link
-          to={`/problems/${handle}`}  // ✅ Absolute path
+          to={`/problems/${handle}`} 
           className={`text-2xl font-bold ${isProblems ? 'text-blue-600' : 'text-gray-600'}`}
         >
           Problems
