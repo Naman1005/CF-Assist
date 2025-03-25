@@ -21,7 +21,7 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="#/" className="flex items-center">
               <Code className="h-8 w-8 text-blue-500" />
               <span className="ml-2 text-xl font-bold">CF-Assist</span>
             </Link>
@@ -62,14 +62,14 @@ function PageHeader() {
     <div className="flex items-center justify-between mb-8">
       <div className="flex items-center gap-6">
         <Link
-          to={`/dashboard/${handle}`}
+          to={`/dashboard/${handle}`}  // ✅ Absolute path
           className={`text-2xl font-bold ${isDashboard ? 'text-blue-600' : 'text-gray-600'}`}
         >
           Dashboard
         </Link>
         <div className="h-8 w-px bg-gray-300"></div>
         <Link
-          to={`/problems/${handle}`}
+          to={`/problems/${handle}`}  // ✅ Absolute path
           className={`text-2xl font-bold ${isProblems ? 'text-blue-600' : 'text-gray-600'}`}
         >
           Problems
@@ -90,31 +90,31 @@ function App() {
           <PageHeader />
           <Routes>
             <Route path="/" element={<UserInput />} />
-            <Route path="/dashboard" element={<Navigate to={handle ? `/dashboard/${handle}` : '/'} replace />} />
+            <Route path="/dashboard" element={<Navigate to={handle ? `#/dashboard/${handle}` : '#/' } replace />} />
             <Route path="/dashboard/:handle" element={
               <PrivateRoute>
                 <Dashboard />
               </PrivateRoute>
             } />
-            <Route path="/problems" element={<Navigate to={handle ? `/problems/${handle}` : '/'} replace />} />
+            <Route path="/problems" element={<Navigate to={handle ? `#/problems/${handle}` : '#/' } replace />} />
             <Route path="/problems/:handle" element={
               <PrivateRoute>
                 <Problems />
               </PrivateRoute>
             } />
-            <Route path="/solved-problems" element={<Navigate to={handle ? `/solved-problems/${handle}` : '/'} replace />} />
+            <Route path="/solved-problems" element={<Navigate to={handle ? `#/solved-problems/${handle}` : '#/' } replace />} />
             <Route path="/solved-problems/:handle" element={
               <PrivateRoute>
                 <SolvedProblems />
               </PrivateRoute>
             } />
-            <Route path="/submissions" element={<Navigate to={handle ? `/submissions/${handle}` : '/'} replace />} />
+            <Route path="/submissions" element={<Navigate to={handle ? `#/submissions/${handle}` : '#/' } replace />} />
             <Route path="/submissions/:handle" element={
               <PrivateRoute>
                 <Submissions />
               </PrivateRoute>
             } />
-            <Route path="/contests" element={<Navigate to={handle ? `/contests/${handle}` : '/'} replace />} />
+            <Route path="/contests" element={<Navigate to={handle ? `#/contests/${handle}` : '#/' } replace />} />
             <Route path="/contests/:handle" element={
               <PrivateRoute>
                 <Contests />
