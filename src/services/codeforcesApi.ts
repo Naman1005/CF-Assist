@@ -23,6 +23,15 @@ export const getProblems = async () => {
   return response.data.result.problems as Problem[];
 };
 
+export const getUpcomingContests = async () => {
+  const response = await axios.get(`${API_BASE_URL}/contest.list`);
+  return response.data.result.filter((contest: Contest) => 
+    contest.phase === 'BEFORE'
+  ).sort((a: Contest, b: Contest) => 
+    a.startTimeSeconds - b.startTimeSeconds
+  );
+};
+
 export const getUserStats = async (handle: string): Promise<UserStats> => {
   const [submissions, contests] = await Promise.all([
     getUserSubmissions(handle),
@@ -31,14 +40,25 @@ export const getUserStats = async (handle: string): Promise<UserStats> => {
 
   const solvedProblems = new Set();
   const problemsByRating: { [key: string]: number } = {};
+  const submissionDates = new Map<string, number>();
 
   submissions.forEach((submission) => {
     if (submission.verdict === 'OK') {
       solvedProblems.add(`${submission.problem.contestId}${submission.problem.index}`);
       const rating = submission.problem.rating || 'Unrated';
       problemsByRating[rating] = (problemsByRating[rating] || 0) + 1;
+
+      // Count submissions by date
+      const date = new Date(submission.creationTimeSeconds * 1000).toISOString().split('T')[0];
+      submissionDates.set(date, (submissionDates.get(date) || 0) + 1);
     }
   });
+
+  // Convert submission dates to array format for heatmap
+  const activityData = Array.from(submissionDates.entries()).map(([date, count]) => ({
+    date,
+    count
+  }));
 
   return {
     handle,
@@ -48,5 +68,6 @@ export const getUserStats = async (handle: string): Promise<UserStats> => {
     problemsByRating,
     submissions,
     contests,
+    activityData
   };
 };

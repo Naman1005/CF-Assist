@@ -23,9 +23,9 @@ export interface Contest {
   type: string;
   phase: string;
   startTimeSeconds: number;
-  rank: number;
-  oldRating: number;
-  newRating: number;
+  rank?: number;
+  oldRating?: number;
+  newRating?: number;
 }
 
 export interface UserStats {
@@ -36,4 +36,10 @@ export interface UserStats {
   problemsByRating: { [key: string]: number };
   submissions: Submission[];
   contests: Contest[];
+  activityData: Array<{ date: string; count: number }>;
+}
+
+export interface ActivityData {
+  date: string;
+  count: number;
 }
