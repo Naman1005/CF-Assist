@@ -79,6 +79,10 @@ function PageHeader() {
   );
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2e7e8d6 (V1)
 function App() {
   const handle = localStorage.getItem('cfHandle');
 
@@ -90,31 +94,51 @@ function App() {
           <PageHeader />
           <Routes>
             <Route path="/" element={<UserInput />} />
+<<<<<<< HEAD
             <Route path="/dashboard" element={<Navigate to={handle ? `/dashboard/${handle}` : '/'} replace />} />
+=======
+            <Route path="/dashboard" element={<Navigate to={handle ? `#/dashboard/${handle}` : '#'} replace />} />
+>>>>>>> 2e7e8d6 (V1)
             <Route path="/dashboard/:handle" element={
               <PrivateRoute>
                 <Dashboard />
               </PrivateRoute>
             } />
+<<<<<<< HEAD
             <Route path="/problems" element={<Navigate to={handle ? `/problems/${handle}` : '/'} replace />} />
+=======
+            <Route path="/problems" element={<Navigate to={handle ? `#/problems/${handle}` : '#'} replace />} />
+>>>>>>> 2e7e8d6 (V1)
             <Route path="/problems/:handle" element={
               <PrivateRoute>
                 <Problems />
               </PrivateRoute>
             } />
+<<<<<<< HEAD
             <Route path="/solved-problems" element={<Navigate to={handle ? `/solved-problems/${handle}` : '/'} replace />} />
+=======
+            <Route path="/solved-problems" element={<Navigate to={handle ? `#/solved-problems/${handle}` : '#'} replace />} />
+>>>>>>> 2e7e8d6 (V1)
             <Route path="/solved-problems/:handle" element={
               <PrivateRoute>
                 <SolvedProblems />
               </PrivateRoute>
             } />
+<<<<<<< HEAD
             <Route path="/submissions" element={<Navigate to={handle ? `/submissions/${handle}` : '/'} replace />} />
+=======
+            <Route path="/submissions" element={<Navigate to={handle ? `#/submissions/${handle}` : '#'} replace />} />
+>>>>>>> 2e7e8d6 (V1)
             <Route path="/submissions/:handle" element={
               <PrivateRoute>
                 <Submissions />
               </PrivateRoute>
             } />
+<<<<<<< HEAD
             <Route path="/contests" element={<Navigate to={handle ? `/contests/${handle}` : '/'} replace />} />
+=======
+            <Route path="/contests" element={<Navigate to={handle ? `#/contests/${handle}` : '#'} replace />} />
+>>>>>>> 2e7e8d6 (V1)
             <Route path="/contests/:handle" element={
               <PrivateRoute>
                 <Contests />
@@ -127,4 +151,8 @@ function App() {
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 2e7e8d6 (V1)
