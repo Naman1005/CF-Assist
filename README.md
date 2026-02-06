@@ -1,4 +1,4 @@
-# CF-Assist 🚀
+# CF-Assist
 
 > "If you can't <del>measure</del> track it, you can't manage it." - _Some random guy named Naman_
 
@@ -6,11 +6,11 @@
 
 ---
 
-### 🔗 [View Live Demo](https://Naman1005.github.io/CF-Assist)
+### [View Live Demo](https://Naman1005.github.io/CF-Assist)
 
 ---
 
-## 🧐 Why?
+## Why?
 
 Standard Codeforces profiles are great, but sometimes you need more than just a number. You need to know _why_ your rating isn't moving.
 
@@ -20,9 +20,9 @@ Standard Codeforces profiles are great, but sometimes you need more than just a 
 - "How consistent is my daily practice?"
 - "Where are the unrated problems in my difficulty range?"
 
-## ✨ What's in the Box?
+## What's in the Box?
 
-### 1. 📊 Deep-Dive Dashboard
+### 1. Deep-Dive Dashboard
 
 Everything you need to know about your current standing, visualized.
 
@@ -30,19 +30,19 @@ Everything you need to know about your current standing, visualized.
 - **Weakest Areas Analysis:** We calculate the failure rate of every tag you've attempted to tell you exactly what to study next.
 - **Activity Heatmap:** A GitHub-style contribution graph for your submissions.
 
-### 2. 🎯 Smart Problem Explorer
+### 2. Smart Problem Explorer
 
 Stop clicking through pages of problem sets.
 
 - **Granular Filtering:** Filter by **Rating**, **Status** (Solved/Unsolved), and **Tags**.
 - **Sorting:** Sort by difficulty to find problems that are "just right" for your current level.
 
-### 3. 🌓 Aesthetics Matter
+### 3. Aesthetics Matter
 
 - **Dark Mode Native:** Toggle between Light and Dark themes instantly.
 - **Responsive Design:** Built with Tailwind CSS to look good on your phone or your desktop monitor.
 
-## 🛠️ Built With
+## Built With
 
 - **Core:** [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - **Build Tool:** [Vite](https://vitejs.dev/)
@@ -50,7 +50,7 @@ Stop clicking through pages of problem sets.
 - **Data Viz:** [Recharts](https://recharts.org/)
 - **API:** [Axios](https://axios-http.com/) (Consuming the public Codeforces API)
 
-## ⚡ Quick Start
+## Quick Start
 
 Want to run it locally?
 
@@ -75,7 +75,7 @@ Want to run it locally?
 
 ---
 
-## 👤 Author
+## Author
 
 **Naman Singh**  
 GitHub: [@naman1005](https://github.com/naman1005)
